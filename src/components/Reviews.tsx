@@ -3,12 +3,18 @@ import { Pagination } from 'swiper/modules';
 import client1 from '../assets/client1.webp';
 import client2 from '../assets/client2.webp';
 import client3 from '../assets/client3.webp';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+interface ReviewItem {
+  author: string;
+  age: string;
+  text: string;
+  webp: string;
+}
+
 export function Reviews() {
-  const reviews = [
+  const reviews: ReviewItem[] = [
     {
       author: 'Marlena Tokarska',
       age: '34 lata',
@@ -35,12 +41,10 @@ export function Reviews() {
         <h2 className="text-4xl font-bold text-slate-900 mb-3">
           Opinie naszych pacjentów
         </h2>
-
         <p className="text-slate-500">
           Sprawdź, jak oceniane są nasze usługi i zespół medyczny.
         </p>
       </div>
-
       <div className="max-w-sm mx-auto">
         <Swiper
           modules={[Pagination]}
@@ -50,30 +54,23 @@ export function Reviews() {
         >
           {reviews.map((review, idx) => (
             <SwiperSlide key={idx}>
-              <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm min-h-[320px] mb-12">
+              <div className="bg-slate-50 border border-slate-200/60 rounded-xl p-6 shadow-sm min-h-[320px] mb-12">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-3xl">
-                    <img src={review.webp} alt={review.author} className="w-full h-full object-cover" />
+                  <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center text-3xl">
+                    <img src={review.webp} alt={review.author} loading="lazy" className="w-full h-full object-cover" />
                   </div>
-
                   <div>
                     <h3 className="text-xl font-bold text-slate-800">
                       {review.author}
                     </h3>
-
                     <p className="text-slate-400">
                       {review.age}
                     </p>
                   </div>
                 </div>
-
                 <p className="text-slate-600 leading-relaxed mb-10">
                   "{review.text}"
                 </p>
-
-                <div className="text-2xl text-blue-500">
-                  ★★★★★
-                </div>
               </div>
             </SwiperSlide>
           ))}

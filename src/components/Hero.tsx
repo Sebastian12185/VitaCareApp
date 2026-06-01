@@ -34,7 +34,7 @@ export function Hero() {
           {bulletPoints.map((item, idx) => (
             <li key={idx} className="flex items-center gap-3 text-brand-dark font-semibold text-sm">
               <div className="w-6 h-6 flex items-center justify-center shrink-0">
-                <img src={checkIcon} alt="" className="w-6 h-6" />
+                <img src={checkIcon} alt="Check" className="w-6 h-6" />
               </div>
               {item}
             </li>

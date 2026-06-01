@@ -9,6 +9,8 @@ export function Footer() {
           <img
             src={logo}
             alt="VitaCare logo"
+            width="112"
+            height="112"
             className="h-14 sm:h-20 md:h-28 w-auto object-contain"
           />
         </div>

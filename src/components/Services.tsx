@@ -2,8 +2,14 @@ import service1 from '../assets/service1.webp';
 import service2 from '../assets/service2.webp';
 import service3 from '../assets/service3.webp';
 
+interface ServiceItem {
+  title: string;
+  desc: string;
+  webp: string;
+}
+
 export function Services() {
-  const servicesList = [
+  const servicesList: ServiceItem[] = [
     {
       title: 'Konsultacje specjalistyczne',
       desc: 'Opieka doświadczonych lekarzy wielu specjalizacji',
@@ -28,36 +34,31 @@ export function Services() {
           Nasze usługi
         </h2>
       </div>
-
       <div className="max-w-xl mx-auto flex flex-col gap-5">
         {servicesList.map((service, idx) => (
           <div
             key={idx}
-            className="border border-slate-100 p-6 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-sky-900/5 hover:-translate-y-0.5"
+            className="border border-slate-200/60 p-6 rounded-2xl bg-slate-50 transition-all duration-300 hover:bg-slate-100/80 hover:shadow-lg hover:shadow-slate-200/50 hover:-translate-y-0.5"
           >
-            <div className="rounded-xl flex items-center justify-center mb-4 ">
+            <div className="rounded-xl flex items-center justify-center mb-4">
               <img
                 src={service.webp}
                 alt={service.title}
+                loading="lazy"
               />
             </div>
-
             <h3 className="text-xl font-bold text-brand-dark mb-1.5 tracking-tight text-center">
               {service.title}
             </h3>
-
             <p className="text-sm font-medium text-brand-muted leading-relaxed mb-4 text-center">
               {service.desc}
             </p>
-
-            <a 
+            <a
               href="#contact-section"
               className="text-brand-blue font-bold text-sm hover:text-brand-dark transition-colors flex items-center gap-1 group mx-auto w-fit"
             >
               Dowiedz się więcej
-              <span className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
+              <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
           </div>
         ))}
