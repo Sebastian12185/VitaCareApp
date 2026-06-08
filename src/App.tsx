@@ -10,8 +10,7 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-800 antialiased">
-      <Header />
-      
+      <Header />  
       <main>
         <Hero />
         <Services />
@@ -20,7 +19,6 @@ function App() {
         <Reviews />
         <Contact />
       </main>
-
       <Footer />
     </div>
   );
