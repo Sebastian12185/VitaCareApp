@@ -42,6 +42,7 @@ export function Contact() {
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
+          {/* LEWA KOLUMNA */}
           <div className="flex flex-col gap-6">
             <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
               <iframe
@@ -80,6 +81,7 @@ export function Contact() {
               </div>
             </div>
           </div>
+          {/* FORMULARZ */}
           <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-900/5">
             <h3 className="text-2xl font-black text-brand-dark mb-2">
               Umów wizytę
@@ -93,11 +95,13 @@ export function Contact() {
               noValidate
             >
               <div>
-                <label className="block text-sm font-semibold mb-2">
+                <label htmlFor="form-name" className="block text-sm font-semibold mb-2 cursor-pointer">
                   Imię i nazwisko
                 </label>
                 <input
+                  id="form-name"
                   type="text"
+                  autoComplete="name"
                   {...register('name')}
                   placeholder="Jan Kowalski"
                   className="w-full p-4 border border-slate-200 bg-white rounded-xl focus:outline-none focus:border-brand-blue"
@@ -109,11 +113,13 @@ export function Contact() {
                 )}
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-2">
+                <label htmlFor="form-contact" className="block text-sm font-semibold mb-2 cursor-pointer">
                   Telefon lub e-mail
                 </label>
                 <input
+                  id="form-contact"
                   type="text"
+                  autoComplete="email"
                   {...register('contact')}
                   placeholder="+48 500 600 700"
                   className="w-full p-4 border border-slate-200 bg-white rounded-xl focus:outline-none focus:border-brand-blue"
@@ -125,10 +131,11 @@ export function Contact() {
                 )}
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-2">
+                <label htmlFor="form-message" className="block text-sm font-semibold mb-2 cursor-pointer">
                   Wiadomość
                 </label>
                 <textarea
+                  id="form-message"
                   rows={5}
                   {...register('message')}
                   placeholder="Opisz swoją sprawę ..."
