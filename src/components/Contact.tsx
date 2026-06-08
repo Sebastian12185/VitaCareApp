@@ -30,7 +30,7 @@ export function Contact() {
   return (
     <section
       id="contact-section"
-      className="px-6 py-16 bg-white border-t border-slate-100"
+      className="px-6 py-16 scroll-mt-20 bg-white border-t border-slate-100"
     >
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
