@@ -46,7 +46,7 @@ export function Contact() {
             <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
               <iframe
                 title="Lokalizacja VitaCare"
-                src="https://maps.google.com/maps?q=ul.%20Zdrowa%2015,%20Gda%C5%A4sk&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148538.9897748759!2d18.585422152131226!3d54.42901552749222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd731c14d4fa6f%3A0x9bb9fbf163b7be8d!2zR2RhxYRzaw!5e0!3m2!1spl!2spl!4v1780941779928!5m2!1spl!2spl"
                 width="100%"
                 height="320"
                 className="border-0"
