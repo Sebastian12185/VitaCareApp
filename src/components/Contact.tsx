@@ -42,7 +42,6 @@ export function Contact() {
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
-          {/* LEWA KOLUMNA */}
           <div className="flex flex-col gap-6">
             <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
               <iframe
@@ -81,7 +80,6 @@ export function Contact() {
               </div>
             </div>
           </div>
-          {/* FORMULARZ */}
           <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-900/5">
             <h3 className="text-2xl font-black text-brand-dark mb-2">
               Umów wizytę
